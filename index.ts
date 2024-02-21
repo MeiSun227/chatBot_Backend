@@ -19,7 +19,7 @@ app.use(cors());
 
 const PORT = process.env.PORT || 3002;
 
-app.post('/ask', (req, res) => {
+app.post('/ask', (_req, res) => {
     const randomIndex= Math.floor(Math.random()*answerJson.length);
     const randomAnswer = answerJson[randomIndex].answer;
     res.json({answer:randomAnswer});
