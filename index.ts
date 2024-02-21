@@ -3,6 +3,7 @@ import cors from 'cors';
 const app = express();
 
 
+
 const answerJson = [
     { answer: "Meow, you asked too much questions." },
     { answer: "Meow. I don't answer question unless there are treats.." },
@@ -15,7 +16,8 @@ const answerJson = [
 ];
 app.use(express.json());
 app.use(cors());
-const PORT = 3002;
+
+const PORT = process.env.PORT || 3002;
 
 app.post('/ask', (req, res) => {
     const randomIndex= Math.floor(Math.random()*answerJson.length);
