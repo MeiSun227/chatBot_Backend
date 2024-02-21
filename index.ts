@@ -19,6 +19,12 @@ app.use(cors());
 
 const PORT = process.env.PORT || 3002;
 
+app.get('/ping', (_req, res) => {
+  console.log('someone pinged here');
+  res.send('pong');
+});
+
+
 app.post('/ask', (_req, res) => {
     const randomIndex= Math.floor(Math.random()*answerJson.length);
     const randomAnswer = answerJson[randomIndex].answer;
