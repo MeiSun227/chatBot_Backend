@@ -1,0 +1,7 @@
+POST http://localhost:3002/ask 
+Content-Type: application/json
+
+{
+    "question": "rest client is a handy tool"
+
+}
