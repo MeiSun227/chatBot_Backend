@@ -1,8 +1,7 @@
 import express from 'express';
 import cors from 'cors';
+
 const app = express();
-
-
 
 const answerJson = [
     { answer: "Meow, you asked too much questions." },
